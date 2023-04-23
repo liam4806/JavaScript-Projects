@@ -1,6 +1,7 @@
 # My First JS Project
 I code this only based on what I've learned and which features are required without watching solution video.
 CSS manipulation is not included on first version since I didn't learn it yet
+
 Thing to do:
 + Click again will reset the secretnumber. 
 + Click check will make score lower.
