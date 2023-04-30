@@ -6,3 +6,5 @@
 ### Again: Reset the game
 
 #### Player who reaches over 100 wins.
+
+##### Coded based on the flowchart without lecture. 
