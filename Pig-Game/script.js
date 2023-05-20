@@ -1,4 +1,5 @@
 'use strict';
+//upgraded code on 23/05/20
 const score0= document.querySelector("#score--0");
 const score1= document.querySelector("#score--1");
 const curscore0=document.querySelector("#current--0");
@@ -18,7 +19,7 @@ score0.textContent=0;
 score1.textContent=0;
 curscore0.textContent=0;
 curscore1.textContent=0;
-document.querySelector("#imgID").classList.add('hidden');
+document.querySelector("#imgID").classList.add('hidden');  //hide the dice png before the game starts
 pl1.classList.remove('player--active');
 pl0.classList.add('player--active');
 pl0.classList.remove('player--winner');
@@ -32,11 +33,11 @@ rolld.addEventListener('click',function(){
 	let secretn = Math.trunc(Math.random()*6+1);
 	let x='dice-'+String(secretn)+'.png';
 	document.getElementById("imgID").src = x;
-	document.getElementById("imgID").classList.remove('hidden');
+	document.getElementById("imgID").classList.remove('hidden'); //display dice
 	if(secretn===1){
-		document.querySelector("#current--"+player).textContent=0;
+		document.querySelector("#current--"+player).textContent=0;  //interact with DOM directly without using const variable that were declared
 		document.querySelector(".player--"+player).classList.remove('player--active');
-		player==='1' ? player='0' : player='1';
+		player==='1' ? player='0' : player='1';  //made player switching more cleaner
 		document.querySelector(".player--"+player).classList.add('player--active');
 	}else{
 		document.querySelector("#current--"+player).textContent=Number(document.querySelector("#current--"+String(player)).textContent)+secretn;
