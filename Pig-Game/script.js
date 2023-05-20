@@ -40,7 +40,7 @@ rolld.addEventListener('click',function(){
 		player==='1' ? player='0' : player='1';  //made player switching more cleaner
 		document.querySelector(".player--"+player).classList.add('player--active');
 	}else{
-		document.querySelector("#current--"+player).textContent=Number(document.querySelector("#current--"+String(player)).textContent)+secretn;
+		document.querySelector("#current--"+player).textContent=Number(document.querySelector("#current--"+player).textContent)+secretn;
 	}}
 })
 
